@@ -1,19 +1,9 @@
 import getFullResponseFromAPI from './1-promise';
 
-// Handling a successful response
-getFullResponseFromAPI(true)
-.then(response => {
-    console.log('Success:', response); // Logs the success response
-  })
-.catch(error => {
-    console.error('Error:', error.message);
-  });
+// Log the promise for a successful response
+const promiseTrue = getFullResponseFromAPI(true);
+console.log(promiseTrue);
 
-// Handling a failed response
-getFullResponseFromAPI(false)
-.then(response => {
-    console.log('Success:', response);
-  })
-.catch(error => {
-    console.error('Error:', error.message); // Logs the error message
-  });
+// Log the promise for a failed response
+const promiseFalse = getFullResponseFromAPI(false);
+console.log(promiseFalse);
